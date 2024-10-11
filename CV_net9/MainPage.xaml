@@ -17,7 +17,7 @@
                 <DataTemplate x:DataType="{x:Null}">
                     <Border Margin="0,5"
                             BackgroundColor="White"
-                            HeightRequest="120"
+                            HeightRequest="140"
                             StrokeShape="RoundRectangle 8"
                             StrokeThickness="0">
                         <Grid Margin="10,8"
@@ -36,7 +36,7 @@
                                    FontSize="10"
                                    HorizontalOptions="End"
                                    LineBreakMode="WordWrap"
-                                   Text="This text will end right"
+                                   Text="Top Left Text Here"
                                    TextColor="DimGray" />
 
                             <BoxView Grid.Row="1"
@@ -63,7 +63,7 @@
                                    Grid.ColumnSpan="3"
                                    Margin="8,0,0,0"
                                    FontSize="10"
-                                   Text="aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+                                   Text="This is the middle text here that can be long in sizing"
                                    TextColor="Gray"
                                    VerticalOptions="Center" />
 
@@ -74,7 +74,8 @@
                                    FontSize="12"
                                    HorizontalOptions="End"
                                    LineBreakMode="NoWrap"
-                                   Text="22222222222222222222222222224"
+                                   Text="Footer Label"
+                                   TextColor="Black"
                                    VerticalOptions="Center" />
                         </Grid>
                     </Border>
