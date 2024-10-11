@@ -1,0 +1,120 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage x:Class="CarouselBug.MainPage"
+             xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml">
+
+    <Grid BackgroundColor="Red">
+
+
+        <!--  Setting to Loop=False renders incorrectly  -->
+        <CarouselView Margin="2,0,2,20"
+                      HeightRequest="180"
+                      ItemsSource="{Binding Items}"
+                      Loop="True"
+                      PeekAreaInsets="20"
+                      VerticalOptions="End">
+            <CarouselView.ItemsLayout>
+                <LinearItemsLayout ItemSpacing="5"
+                                   Orientation="Horizontal"
+                                   SnapPointsAlignment="Center"
+                                   SnapPointsType="MandatorySingle" />
+            </CarouselView.ItemsLayout>
+            <CarouselView.ItemTemplate>
+                <DataTemplate x:DataType="{x:Null}">
+                    <Border BackgroundColor="White"
+                            Stroke="Blue"
+                            StrokeShape="RoundRectangle 12"
+                            StrokeThickness="0">
+                        <Grid Margin="16"
+                              ColumnDefinitions="*,*"
+                              ColumnSpacing="15"
+                              RowDefinitions="*,*,36"
+                              RowSpacing="15">
+                            <VerticalStackLayout Grid.Row="0"
+                                                 Grid.ColumnSpan="2"
+                                                 VerticalOptions="Center">
+
+                                <Label FontSize="16"
+                                       LineBreakMode="WordWrap"
+                                       Text="DummyLabel"
+                                       TextColor="#333333"
+                                       VerticalOptions="Center" />
+
+                                <Label FontFamily="Medium"
+                                       FontSize="14"
+                                       LineBreakMode="WordWrap"
+                                       Text="DummyDesc"
+                                       TextColor="#5F5E6A" />
+                            </VerticalStackLayout>
+
+                            <Border Grid.Row="1"
+                                    Grid.Column="0"
+                                    BackgroundColor="LightGray"
+                                    HorizontalOptions="Start"
+                                    StrokeShape="RoundRectangle 12"
+                                    StrokeThickness="0"
+                                    VerticalOptions="Center">
+                                <Grid Margin="6" ColumnDefinitions="20,*">
+
+                                    <Label FontSize="14"
+                                           HorizontalOptions="Center"
+                                           Text="I"
+                                           TextColor="Black"
+                                           VerticalOptions="Center" />
+                                    <Label Grid.Column="1"
+                                           FontFamily="Regular"
+                                           FontSize="14"
+                                           Text="Text2"
+                                           TextColor="Black"
+                                           VerticalOptions="Center" />
+                                </Grid>
+                            </Border>
+
+                            <Border Grid.Row="1"
+                                    Grid.Column="1"
+                                    BackgroundColor="#e8fccf"
+                                    HorizontalOptions="Center"
+                                    StrokeShape="RoundRectangle 12"
+                                    StrokeThickness="0"
+                                    VerticalOptions="Center">
+                                <Grid Margin="6" ColumnDefinitions="20,*">
+
+                                    <Label FontSize="14"
+                                           HorizontalOptions="Center"
+                                           Text="I"
+                                           TextColor="#155d27"
+                                           VerticalOptions="Center" />
+
+                                    <Label Grid.Column="1"
+                                           FontSize="14"
+                                           Text="Text1"
+                                           TextColor="#155d27"
+                                           VerticalOptions="Center" />
+                                </Grid>
+                            </Border>
+
+                            <Label Grid.Row="2"
+                                   FontSize="24"
+                                   HorizontalOptions="Start"
+                                   Text="I am here"
+                                   TextColor="Black"
+                                   VerticalOptions="Center" />
+
+                            <Button Grid.Row="2"
+                                    Grid.Column="1"
+                                    BackgroundColor="White"
+                                    BorderColor="{StaticResource Primary}"
+                                    BorderWidth="2"
+                                    Text="ButtonText"
+                                    TextColor="{StaticResource Primary}"
+                                    VerticalOptions="Center" />
+                        </Grid>
+                    </Border>
+                </DataTemplate>
+            </CarouselView.ItemTemplate>
+        </CarouselView>
+
+
+    </Grid>
+
+</ContentPage>
