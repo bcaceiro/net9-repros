@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="GradientBrushBugApp.MainPage">
+    <ContentPage.Background>
+        <RadialGradientBrush Center="0.5,0.35" Radius="1.0">
+            <!--  Slightly brighter core  -->
+            <GradientStop Offset="0.0" Color="#068C6D" />
+            <!--  ~20% brighter  -->
+            <!--  Mid-point with softened base  -->
+            <GradientStop Offset="0.15" Color="#04715C" />
+            <!--  ~10% brighter  -->
+            <!--  Outer smooth transition  -->
+            <GradientStop Offset="0.8" Color="#03604D" />
+            <GradientStop Offset="1.0" Color="#03604D" />
+        </RadialGradientBrush>
+    </ContentPage.Background>
+</ContentPage>
