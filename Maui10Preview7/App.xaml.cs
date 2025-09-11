@@ -1,5 +1,4 @@
-﻿[assembly: XamlProcessing(XamlInflator.SourceGen)]
-namespace Maui10Preview7
+﻿namespace Maui10Preview7
 {
     public partial class App : Application
     {
